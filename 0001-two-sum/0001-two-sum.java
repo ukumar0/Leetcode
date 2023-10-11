@@ -10,6 +10,6 @@ class Solution {
             complementIndexMap.put(nums[i], i);
         }
         
-        throw new IllegalArgumentException("No two elements add up to the target.");
+        throw new IllegalArgumentException();
     }
 }
