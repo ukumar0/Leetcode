@@ -1,15 +1,10 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        Map<Integer, Integer> complementIndexMap = new HashMap<>();
-        
-        for (int i = 0; i < nums.length; i++) {
-            int complement = target - nums[i];
-            if (complementIndexMap.containsKey(complement)) {
-                return new int[]{complementIndexMap.get(complement), i};
+        for(int a=0;a<nums.length;a++){
+            for(int b = a+1;b<nums.length;b++){
+                if(nums[a]+nums[b]==target)return new int[]{a,b};
             }
-            complementIndexMap.put(nums[i], i);
         }
-        
-        throw new IllegalArgumentException();
+        return new int[]{};
     }
 }
