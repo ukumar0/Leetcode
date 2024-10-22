@@ -32,6 +32,7 @@ class Solution {
             s[i] = sums[i];
         }
         Arrays.sort(s, Collections.reverseOrder());
-        return (k > max + 1) ? -1 : s[k - 1];
+        if (k > max + 1) return -1;
+        return s[k - 1];
     }
 }
